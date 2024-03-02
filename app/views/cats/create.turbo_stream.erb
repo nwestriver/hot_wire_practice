@@ -1,0 +1,8 @@
+<%# catsの先頭に新規追加された猫を表示する %>
+<%= turbo_stream.prepend 'cats', @cat %>
+
+<%# 登録完了時のフォームの入力値を空欄にする %>
+<%= turbo_stream.update Cat.new, '' %>
+
+<%# flashを表示(helperメソッド) %>
+<%= turbo_stream_flash %>
